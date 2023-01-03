@@ -59,7 +59,7 @@ namespace DevIO.Api.Controllers
         {
             var erros = modelState.Values.SelectMany(e => e.Errors);
 
-            foreach(var erro in erros)
+            foreach (var erro in erros)
             {
                 var errorMsg = erro.Exception == null ? erro.ErrorMessage : erro.Exception.Message;
                 NotificarErro(errorMsg);
